@@ -40,19 +40,17 @@
 
       <div>
         <ul class="nav nav-tabs">
-          <!-- 선택된탭:선택된 탭에 .active    -->
-          <li class="active"><a data-toggle="tab" href="#recent">최근</a></li>
-          <li><a data-toggle="tab" href="#view">많이본</a></li>
-          <li><a data-toggle="tab" href="#popular">실시간인기</a></li>
+          <li class="active"><a href="#recent">최근</a></li>
+          <li><a href="#view">많이본</a></li>
+          <li><a href="#popular">실시간인기</a></li>
         </ul>
       </div>
 
       <div id="list">
-        <!-- 제목, 링크, 이미지, CP 를 표시해주세요  -->
         <div id="recent"></div>
         <div id="view"></div>
         <div id="popular"></div>
-        <!-- 로딩마크업: 로딩중일때만 표시 -->
+        
         <div id="loading" class="text-center">
           <span class="glyphicon glyphicon-refresh"></span> 로딩중
         </div>
@@ -63,7 +61,6 @@
       </div>
     </div>
 
-    <!-- json호출 -->
     <script src="popular.js"></script>
     <script src="recent.js"></script>
     <script src="view.js"></script>
