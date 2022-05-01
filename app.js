@@ -9,8 +9,8 @@ let recentList = "";
 let viewList = "";
 let popularList = "";
 
-const list10 = (start, end) => {
-    for(let i=start; i<end; i++){
+const list10 = () => {
+    for(let i=0; i<10; i++){
         recentList += 
         `<div class='cover'>
             <div>
@@ -54,6 +54,14 @@ const list10 = (start, end) => {
     $list[2].innerHTML = popularList;
 };
 
+const showLoading = (func) =>{
+    $list[3].style.display = 'block';
+    setTimeout(() => {
+        func();
+        $list[3].style.display = 'none';
+    },1000);
+};
+
 for(let i=0; i<$nav.length; i++){
     $nav[i].addEventListener('click', (e) => {
         e.preventDefault();
@@ -66,10 +74,12 @@ for(let i=0; i<$nav.length; i++){
             $list[j].style.display = 'none';
         }
         e.target.classList.add('active');
+
+        showLoading(()=>{$tabTarget.style.display = 'block';})
         
-        $tabTarget.style.display = 'block';
         // $tabTarget.innerHTML = tabContents[0].title;
     });
 }
 
-list10(0, 10);
+showLoading(list10);
+

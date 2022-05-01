@@ -13,7 +13,7 @@
       href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
     <style>
-      .list {
+      #list {
         margin: 10px;
         padding: 10px;
       }
@@ -26,7 +26,7 @@
         display: flex;
         justify-content: space-between;
       }
-      #view, #popular {
+      #view, #popular, #loading {
         display: none;
       }
     </style>
@@ -50,7 +50,7 @@
         <div id="view"></div>
         <div id="popular"></div>
         <!-- 로딩마크업: 로딩중일때만 표시 -->
-        <div class="text-center">
+        <div id="loading" class="text-center">
           <span class="glyphicon glyphicon-refresh"></span> 로딩중
         </div>
       </div>
